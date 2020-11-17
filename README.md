@@ -5,7 +5,7 @@ This is a template project for a Vuestro/Vue/Webpack based project. It takes car
 ## Development
 
 ```
-git clone git@github.com:msmiley\vuestro-template
+git clone git@github.com:msmiley/vuestro-template
 cd vuestro-template
 npm i
 npm run dev
