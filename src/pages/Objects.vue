@@ -41,11 +41,14 @@
 
 <script>
 
+/* global Vuex */
+
 export default {
-  name: 'NewPage',
+  name: 'Objects',
   data() {
     return {
       loading: false,
+      selectedItem: null,
       items: [
         {
           name: 'Example Item 1',
@@ -62,8 +65,10 @@ export default {
           clicked: 0,
         }
       ],
-      selectedItem: null,
     };
+  },
+  computed: {
+    ...Vuex.mapGetters(['exampleData']),
   },
   methods: {
     onNew() {
@@ -74,9 +79,6 @@ export default {
         opened: false,
         clicked: 0,
       });
-    },
-    reload() {
-
     },
     onClick(i) {
       i.clicked += 1;

@@ -20,18 +20,20 @@
 
 <script>
 
-/* global __VERSION__ */
+/* global VERSION */
 
 export default {
   name: 'app',
   data() {
     return {
       dark: true,
-      version: __VERSION__,
+      version: VERSION,
       user: 'A Vue User',
       userImg: require('@/assets/default-user.jpg'),
       role: 'Admin',
     };
+  },
+  mounted() {
   },
 };
 </script>

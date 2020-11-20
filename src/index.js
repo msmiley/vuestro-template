@@ -7,6 +7,8 @@ import App from './App.vue';
 import store from './store';
 import router from './router';
 
+
+
 // disable production tip
 Vue.config.productionTip = false;
 

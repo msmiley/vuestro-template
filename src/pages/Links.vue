@@ -32,7 +32,7 @@
 <script>
 
 export default {
-  name: 'LinkDiagram',
+  name: 'Links',
   data() {
     return {
       graphOptions: {
