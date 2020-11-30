@@ -1,5 +1,7 @@
 /* global axios */
 
+const EXAMPLE_URI = 'http://localhost:3000/api/v1/example';
+
 export default {
   state: {
     exampleData: [],
@@ -11,7 +13,7 @@ export default {
   },
   actions: {
     loadExampleData({ commit }) {
-      axios.get('/api/v1/example').then((res) => {
+      axios.get(EXAMPLE_URI).then((res) => {
         commit('exampleDataLoaded', res.data);
       });
     },

@@ -4,6 +4,7 @@ import Router from 'vue-router';
 import Dashboard from './pages/Dashboard.vue';
 import Objects from './pages/Objects.vue';
 import Links from './pages/Links.vue';
+import Table from './pages/Table.vue';
 import Settings from './pages/Settings.vue';
 
 Vue.use(Router);
@@ -40,6 +41,16 @@ export default new Router({
       name: 'links',
       path: '/links',
       component: Links,
+    },
+    {
+      meta: {
+        title: 'Table',
+        sidebar: true,
+        icon: 'table',
+      },
+      name: 'table',
+      path: '/table',
+      component: Table,
     },
     {
       meta: {
