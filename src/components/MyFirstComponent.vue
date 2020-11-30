@@ -1,6 +1,6 @@
 <template>
   <vuestro-container>
-    Hello world
+    This is the MyFirstComponent component
   </vuestro-container>
 </template>
 

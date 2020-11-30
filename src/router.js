@@ -2,7 +2,7 @@
 import Router from 'vue-router';
 
 import Dashboard from './pages/Dashboard.vue';
-import Objects from './pages/Objects.vue';
+import Sidebar from './pages/Sidebar.vue';
 import Links from './pages/Links.vue';
 import Table from './pages/Table.vue';
 import Settings from './pages/Settings.vue';
@@ -24,23 +24,13 @@ export default new Router({
     },
     {
       meta: {
-        title: 'Objects',
+        title: 'Sidebar',
         sidebar: true,
         icon: 'cubes',
       },
-      name: 'objects',
-      path: '/objects',
-      component: Objects,
-    },
-    {
-      meta: {
-        title: 'Links',
-        sidebar: true,
-        icon: 'project-diagram',
-      },
-      name: 'links',
-      path: '/links',
-      component: Links,
+      name: 'sidebar',
+      path: '/sidebar',
+      component: Sidebar,
     },
     {
       meta: {
@@ -51,6 +41,16 @@ export default new Router({
       name: 'table',
       path: '/table',
       component: Table,
+    },
+    {
+      meta: {
+        title: 'Links',
+        sidebar: true,
+        icon: 'project-diagram',
+      },
+      name: 'links',
+      path: '/links',
+      component: Links,
     },
     {
       meta: {
