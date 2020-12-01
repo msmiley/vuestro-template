@@ -36,7 +36,7 @@ npm i
 npm run dev
 ```
 
-Open a browser to http://localhost:8088 and you should see something like the screenshot above.
+Open a browser to http://localhost:8080 and you should see something like the screenshot above.
 
 ## Release (npm run build)
 
