@@ -9,7 +9,7 @@
     "axios": "^0.21.0",
     "vue": "^2.6.12",
     "vue-router": "^3.4.3",
-    "vuestro": "^3.41.0",
+    "vuestro": "^3.46.1",
     "vuex": "^3.5.1"
   },
   "devDependencies": {
