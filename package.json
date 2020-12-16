@@ -1,5 +1,6 @@
 {
   "name": "vuestro-template",
+  "version": "0.0.1",
   "description": "Quickly bootstrap a Vuestro-based Vue.js project",
   "scripts": {
     "dev": "webpack-dev-server -d --hot --port 8080 --config ./node_modules/vuestro/build/webpack.dev.config.js",
