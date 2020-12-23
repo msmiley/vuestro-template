@@ -31,7 +31,7 @@ export default {
   },
   actions: {
     loadSettings({ commit }) {
-      // axios.get(SETTINGS_URL).then((res) => {
+      // return axios.get(SETTINGS_URL).then((res) => {
       //   commit('settingsLoaded', res.data);
       // }).catch((err) => {
       //   this.dispatch('checkAuthForHTTPError', err);
@@ -39,7 +39,7 @@ export default {
     },
     saveSettings({ commit, state }) {
       // if (state.loaded) { // don't do it before initial load
-      //   axios.post(SETTINGS_URL, state.settings).then((res) => {
+      //   return axios.post(SETTINGS_URL, state.settings).then((res) => {
       //     commit('settingsSaved');
       //   }).catch((err) => {
       //     this.dispatch('checkAuthForHTTPError', err);
@@ -47,7 +47,7 @@ export default {
       // }
     },
     resetSettings({ commit }) {
-      // axios.post(SETTINGS_URL, {}).then((res) => {
+      // return axios.post(SETTINGS_URL, {}).then((res) => {
       //   this.dispatch('loadSettings');
       // }).catch((err) => {
       //   this.dispatch('checkAuthForHTTPError', err);

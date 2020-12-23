@@ -17,24 +17,28 @@ export default {
   },
   actions: {
     loadExampleData({ commit }) {
-      axios.get(EXAMPLE_URI).then((res) => {
+      return axios.get(EXAMPLE_URI).then((res) => {
         commit('exampleDataLoaded', res.data);
       });
     },
     addExampleItem({ commit }, d) {
-      axios.post(EXAMPLE_URI, d).then((res) => {
+      // we return the axios call because it returns a promise that can be
+      // used at the caller to tell when it's complete. i.e. if you use a modal
+      // to add an example item, you can use .then() to know when it's done and
+      // close the modal
+      return axios.post(EXAMPLE_URI, d).then((res) => {
         this.dispatch('loadExampleData');
       });
     },
     updateExampleItem({ commit }, d) {
-      axios.put(`${EXAMPLE_URI}/${d._id}`, {
+      return axios.put(`${EXAMPLE_URI}/${d._id}`, {
         $set: d // mongo update operations allowed here
       }).then((res) => {
         this.dispatch('loadExampleData');
       });
     },
     deleteExampleItem({ commit }, d) {
-      axios.delete(`${EXAMPLE_URI}/${d._id}`, d).then((res) => {
+      return axios.delete(`${EXAMPLE_URI}/${d._id}`, d).then((res) => {
         this.dispatch('loadExampleData');
       });
     },

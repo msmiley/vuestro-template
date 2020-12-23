@@ -76,7 +76,7 @@ export default {
     login({ commit }, creds) {
       commit('loggingIn'); // so UI can show spinner
       // post the login
-      axios.post(LOGIN_URL, {
+      return axios.post(LOGIN_URL, {
         username: creds.username,
         password: creds.password,
       }).then((res) => {
@@ -96,7 +96,7 @@ export default {
       });
     },
     changePassword({ commit }, creds) {
-      axios.post(RESET_URL, {
+      return axios.post(RESET_URL, {
         username: creds.username,
         password: creds.password,
       }).then((res) => {
@@ -105,7 +105,7 @@ export default {
     },
     logout({ commit }) {
       commit('loggedOut');
-      axios.post(LOGOUT_URL, null, {}).then((res) => {
+      return axios.post(LOGOUT_URL, null, {}).then((res) => {
         console.log('server acknowledged logout');
       }).catch((err) => {
         if (err.response.status === 500 || err.response.status === 400) {
